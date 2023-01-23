@@ -15,10 +15,11 @@ service_name = [x[:-7] for x in service_name]
 
 traffic = [x[47:] for x in traffic]
 traffic = [x[:-73] for x in traffic]
-
+traffic = [list((re.sub('^\s+|\s+$','',x) for x in traffic))]
+print((traffic))
 cleaned = pd.DataFrame({
     'service name' : service_name,
-    'traffic' : traffic,
+    'traffic' : traffic[0],
     'price': price
 })
 cleaned.to_csv('pars_cleaned_dataset.csv', encoding='utf-8-sig', index=False)

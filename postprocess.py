@@ -2,7 +2,7 @@ import re
 
 import pandas as pd
 
-data = pd.read_csv('DataFrame.csv')
+data = pd.read_csv('pars_raw.csv')
 price = list(data['price'])
 service_name = list(data['service name'])
 traffic = list(data['traffic'])
@@ -21,4 +21,4 @@ cleaned = pd.DataFrame({
     'traffic' : traffic,
     'price': price
 })
-cleaned.to_csv('cleaned_dataset.csv', encoding='utf-8-sig', index=False)
+cleaned.to_csv('pars_cleaned_dataset.csv', encoding='utf-8-sig', index=False)

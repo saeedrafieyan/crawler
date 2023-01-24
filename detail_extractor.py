@@ -3,14 +3,13 @@ import re
 import pandas as pd
 
 columns = ['product type', 'deal type', 'traffic', 'bandwidth', 'duration', 'FCP', 'price']
-product_type, deal_type, traffic, bandwidth, duration, FCP, price = [],[],[],[],[],[],[]
+product_type, deal_type, traffic, bandwidth, duration, FCP, price = [], [], [], [], [], [], []
 
-dataset = pd.read_csv('pars_cleaned_dataset.csv')
+dataset = pd.read_csv('hiweb_cleaned_dataset.csv')
 
 ds_s_name = list(dataset['service name'])
 ds_price = list(dataset['price'])
 ds_traffic = list(dataset['traffic'])
-
 
 for item in ds_s_name:
     separated = item.split(' ')
@@ -19,18 +18,17 @@ for item in ds_s_name:
     else:
         product_type.append('ترافیک')
 
-    for i in range(len(separated)):
-        if separated[i] == 'مگابیت':
-            bandwidth.append(separated[i-1])
-        else:
-            bandwidth.append('NaN')
+    try:
+        index_band = separated.index('مگابیت')
+        bandwidth.append(separated[index_band - 1])
+    except:
+        bandwidth.append('NaN')
 
-    for i in range(len(separated)):
-        if separated[i] == 'ماهه':
-            duration.append(separated[i-1])
-        else:
-            duration.append('NaN')
-
+    try:
+        index_dur = separated.index('ماهه')
+        duration.append(index_dur-1)
+    except:
+        duration.append('NaN')
 
 
 for item in ds_traffic:
@@ -47,13 +45,15 @@ for item in ds_price:
     except:
         price.append('NaN')
 
+fcp = ['Hiweb'] * len(product_type)
+
 print(len(traffic) == len(product_type))
-# new_dataset = pd.DataFrame({'product type':product_type, 'deal type':deal_type, 'traffic':traffic,'bandwidth':bandwidth, 'duration':duration, 'price':price})
+new_dataset = pd.DataFrame({'FCP':fcp,'product type':product_type, 'traffic':traffic,'bandwidth':bandwidth, 'duration':duration, 'price':price})
 
 print(len(product_type))
-print(len(deal_type))
+# print(len(deal_type))
 print(len(traffic))
-print(len(bandwidth))
-print(len(duration))
+print(len(bandwidth))  # 280
+print(len(duration))  # 280
 print(len(price))
 new_dataset.to_csv('HiwebReformed.csv', encoding='utf-8-sig', index=False)

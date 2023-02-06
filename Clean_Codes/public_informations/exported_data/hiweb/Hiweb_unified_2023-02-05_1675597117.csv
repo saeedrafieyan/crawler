@@ -1,0 +1,15 @@
+﻿FCP,product type,traffic,bandwidth,duration,night traffic,infra,price,description
+hiweb,سرویس,20,512,1,0,ADSL,250000,None
+hiweb,سرویس,20,1024,1,0,ADSL,415000,None
+hiweb,سرویس,38,2048,1,0,ADSL,500000,None
+hiweb,سرویس,50,3072,1,0,ADSL,715000,None
+hiweb,سرویس,90,4096,1,0,ADSL,980000,None
+hiweb,سرویس,200,8192,1,0,ADSL,1175000,None
+hiweb,سرویس,400,16384,1,0,ADSL,1875000,None
+hiweb,سرویس,1,512,1,0,ADSL,125000,None
+hiweb,سرویس,2,1024,1,0,ADSL,200000,None
+hiweb,سرویس,3,2048,1,0,ADSL,250000,None
+hiweb,سرویس,5,3072,1,0,ADSL,350000,None
+hiweb,سرویس,8,4096,1,0,ADSL,400000,None
+hiweb,سرویس,10,8192,1,0,ADSL,500000,None
+hiweb,سرویس,16,16384,1,0,ADSL,800000,None

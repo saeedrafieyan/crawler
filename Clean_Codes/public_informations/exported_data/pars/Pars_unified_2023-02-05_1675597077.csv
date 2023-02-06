@@ -1,0 +1,15 @@
+﻿FCP,product type,traffic,bandwidth,duration,night traffic,infra,price,description
+pars,سرویس,20,512,1,0,ADSL,250000,Empty
+pars,سرویس,20,1024,1,0,ADSL,415000,Empty
+pars,سرویس,38,2048,1,0,ADSL,500000,Empty
+pars,سرویس,50,3072,1,0,ADSL,715000,Empty
+pars,سرویس,90,4096,1,0,ADSL,980000,Empty
+pars,سرویس,200,8192,1,0,ADSL,1175000,Empty
+pars,سرویس,400,16384,1,0,ADSL,1875000,Empty
+pars,سرویس,1,512,1,0,ADSL,125000,Empty
+pars,سرویس,2,1024,1,0,ADSL,200000,Empty
+pars,سرویس,3,2048,1,0,ADSL,250000,Empty
+pars,سرویس,5,3072,1,0,ADSL,350000,Empty
+pars,سرویس,8,4096,1,0,ADSL,400000,Empty
+pars,سرویس,10,8192,1,0,ADSL,500000,Empty
+pars,سرویس,16,16384,1,0,ADSL,800000,Empty
